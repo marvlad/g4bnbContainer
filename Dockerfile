@@ -11,4 +11,8 @@ RUN dnf -y update && \
     net-tools \
     && dnf clean all
 
+RUN git clone https://github.com/marvlad/g4bnbContainer.git && \
+    cd g4bnbContainer && \
+    source setup.sh
+
 CMD ["/bin/bash"]
